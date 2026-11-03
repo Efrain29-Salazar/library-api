@@ -1,0 +1,13 @@
+-- Crea la tabla de libros
+CREATE TABLE IF NOT EXISTS books (
+
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+
+  title VARCHAR(200) NOT NULL,
+
+  author VARCHAR(150) NOT NULL,
+
+  isbn VARCHAR(20) NOT NULL,
+
+  copies INTEGER NOT NULL CHECK (copies >= 0)
+);
